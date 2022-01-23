@@ -1,6 +1,8 @@
 from pymongo import MongoClient
 
-conn = MongoClient()
+url="mongodb+srv://<admin>:<admin>@cluster0.3chly.mongodb.net/test";
+
+conn = MongoClient(url)
 
 db = conn.pytech
 
@@ -18,13 +20,13 @@ result = collection.update_one(
 
 {
 
-"$set":{
+	"$set":{
 
-"last_name":"Smith"
+		"last_name":"Smith"
 
-}
+		}
 
-}
+		}
 
 )
 
